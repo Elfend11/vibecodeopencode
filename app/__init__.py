@@ -19,8 +19,15 @@ def create_app(test_config=None):
     os.makedirs(app.instance_path, exist_ok=True)
 
     from app.database import init_app as init_database
+    from app.errors import ApiError
+    from app.routes import init_app as init_routes
 
     init_database(app)
+    init_routes(app)
+
+    @app.errorhandler(ApiError)
+    def handle_api_error(error):
+        return jsonify(error.to_dict()), error.status_code
 
     @app.errorhandler(404)
     def handle_not_found(error):

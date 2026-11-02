@@ -18,6 +18,10 @@ def create_app(test_config=None):
     # SQLite database file lives in instance/ and is never served publicly.
     os.makedirs(app.instance_path, exist_ok=True)
 
+    from app.database import init_app as init_database
+
+    init_database(app)
+
     @app.errorhandler(404)
     def handle_not_found(error):
         return (

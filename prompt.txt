@@ -2,3 +2,4 @@
 2. lanjutkan task pertama, kemudian konfirmasi
 3. semua file markdown, masukkan ke satu folder baru di root project, dengan nama folder markdown
 4. git remote add origin https://github.com/Elfend11/vibecodeopencode.git setiap ada perubahan wajib di review dan konfirmasi sebelum di push ke github, lakukan
+5. lanjutkan ke tahap 2

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+
+# Flask instance (SQLite database)
+instance/
+
+# Environment variables
+.env
+
+# Editor / OS
+.idea/
+.vscode/
+Thumbs.db
